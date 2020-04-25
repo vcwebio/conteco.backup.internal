@@ -2,9 +2,9 @@
 version: '3'
 services:
 
-# START SERVICE backup.external
+# START SERVICE backup.internal
   backup:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.backup.external:20200326
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.backup.internal:20200422
     environment: []
     command: [${CONTECO_DC_BACKUP_COMMAND}]
     volumes: [${CONTECO_DC_BACKUP_VOLUMES}]
@@ -20,7 +20,7 @@ services:
           cpus: '${CONTECO_DC_BACKUP_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_BACKUP_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
       labels: [${CONTECO_DC_BACKUP_DEPLOY_LABELS}]
-# END SERVICE backup.external
+# END SERVICE backup.internal
 
 volumes: {}
 networks: {${CONTECO_NETWORKLOCAL}_overlay: { external: true }}
