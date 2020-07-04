@@ -5,7 +5,7 @@ export CONTECO_DESCRIPTION="Backup of all repositories of the non-external image
 
 export CONTECO_TYPE="backup"
 export CONTECO_NAME="internal"
-export CONTECO_TAG="20200703"
+export CONTECO_TAG="20200704"
 
 export CONTECO_BASE="external.bash:5.0.9"
 export CONTECO_BUILD="image-base"
